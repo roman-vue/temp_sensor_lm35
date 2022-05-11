@@ -7,7 +7,7 @@ const server = http.createServer(app);//**created server
 const io = Socket.listen(server)//**init socket.io *//
 
 app.use(express.static(__dirname + '/public'));//** ubication the files public */
-server.listen(3000, () => console.log('server on port 3000'));
+server.listen(process.env.PORT || 3000, () => console.log('server on port 3000'));
 
 
 const {SerialPort} = require('serialport');
